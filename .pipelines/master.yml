@@ -24,4 +24,5 @@ pipelines:
             - cd $res_helm_hub_sync_master_resourcePath
             - ls
             - pwd
+            - docker ps
             - echo "echo merge to master!!!"
