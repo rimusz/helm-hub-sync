@@ -6,6 +6,8 @@ resources:
       path: rimusz/helm-hub-sync
       tags: 
         include: .*.*.*
+      buildOn: 
+        tagCreate: true
 
 pipelines:
   - name: helmHubSyncRelease
