@@ -4,8 +4,6 @@ resources:
     configuration:
       gitProvider: rimas_github
       path: rimusz/helm-hub-sync
-      branches: 
-        include: master
       tags: 
         include: .*.*.*
 
