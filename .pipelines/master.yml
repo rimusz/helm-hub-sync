@@ -5,7 +5,7 @@ resources:
       gitProvider: rimas_github
       path: rimusz/helm-hub-sync
       files:
-        exclude: .pipelines/tag.yml,.pipelines/master.yml,.pipelines/pr.yml
+        exclude: tag.yml,master.yml,pr.yml
       branches: 
         include: master
 
