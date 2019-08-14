@@ -5,6 +5,7 @@ resources:
       gitProvider: rimas_github
       path: rimusz/helm-hub-sync
       buildOn:
+        commit: false
         pullRequestCreate: true
 
 pipelines:
