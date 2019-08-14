@@ -24,4 +24,4 @@ pipelines:
             - cd $res_helm_hub_sync_master_resourcePath
             - ls
             - pwd
-            - echo "echo merge to master"
+            - echo "echo merge to master!!!"
