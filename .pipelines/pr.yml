@@ -1,0 +1,31 @@
+resources:
+  - name: helm_hub_sync_pr
+    type: GitRepo
+    configuration:
+      gitProvider: rimas_github
+      path: rimusz/helm-hub-sync
+      branches: 
+        include: master
+      buildOn:
+        pullRequestCreate: true
+
+pipelines:
+  - name: helmHubSyncPr
+    steps:
+      - name: run
+        type: Bash
+        configuration:
+          environmentVariables:
+            DESIRED_VERSION: v2.14.3
+          inputResources:
+            - name: helm_hub_sync_master
+          integrations:
+            - name: cpe_ci_kube
+            - name: cpe_ci_cluster
+            - name: cpe_pipeline_slack
+        execution:
+          onExecute:
+            - cd $res_helm_hub_sync_pr_resourcePath
+            - ls
+            - pwd
+            - echo "echo merge to master"

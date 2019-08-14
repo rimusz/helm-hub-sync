@@ -1,0 +1,27 @@
+resources:
+  - name: helm_hub_sync_release
+    type: GitRepo
+    configuration:
+      gitProvider: rimas_github
+      path: rimusz/helm-hub-sync
+      tags: 
+        include: .*.*.*
+
+pipelines:
+  - name: helmHubSyncRelease
+    steps:
+      - name: run
+        type: Bash
+        configuration:
+          environmentVariables:
+            DESIRED_VERSION: v2.14.3
+          inputResources:
+            - name: helm_hub_sync_release
+        execution:
+          onStart:
+          onExecute:
+            - cd $res_helm_hub_sync_release_resourcePath
+            - ls
+            - pwd
+            - gcloud version
+            - echo "Release"
