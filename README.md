@@ -41,3 +41,6 @@ To run the app, you'll need to set a few command line variables
   * Set `ARTIFACTORY_AUTHTYPE` to `apikey` and `ARTIFACTORY_AUTH` to `your api key>`
 
 
+
+
+
