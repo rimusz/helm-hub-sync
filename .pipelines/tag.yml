@@ -4,9 +4,10 @@ resources:
     configuration:
       gitProvider: rimas_github
       path: rimusz/helm-hub-sync
-      tags: 
+      tags:
         include: .*.*.*
-      buildOn: 
+      buildOn:
+        commit: false
         tagCreate: true
 
 pipelines:
