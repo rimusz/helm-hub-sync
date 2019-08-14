@@ -17,10 +17,6 @@ pipelines:
             DESIRED_VERSION: v2.14.3
           inputResources:
             - name: helm_hub_sync_master
-          integrations:
-            - name: cpe_ci_kube
-            - name: cpe_ci_cluster
-            - name: cpe_pipeline_slack
         execution:
           onExecute:
             - cd $res_helm_hub_sync_master_resourcePath
