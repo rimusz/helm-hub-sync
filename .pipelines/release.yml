@@ -20,7 +20,6 @@ pipelines:
           inputResources:
             - name: helm_hub_sync_release
         execution:
-          onStart:
           onExecute:
             - cd $res_helm_hub_sync_release_resourcePath
             - ls
