@@ -39,8 +39,3 @@ To run the app, you'll need to set a few command line variables
   * Set `ARTIFACTORY_AUTHTYPE` to `basic` and `ARTIFACTORY_AUTH` to `<username>:<token>`
 * Using a dedicated header (X-JFrog-Art-Api) with your API Key.
   * Set `ARTIFACTORY_AUTHTYPE` to `apikey` and `ARTIFACTORY_AUTH` to `your api key>`
-
-
-
-
-
