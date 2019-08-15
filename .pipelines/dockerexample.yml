@@ -1,0 +1,23 @@
+
+      - name: bld_svc
+        type: DockerBuild
+        configuration:
+          dockerFileLocation: .
+          dockerFileName: Dockerfile
+          dockerImageName: 34.66.110.173:8081/docker-local/gomicrosvc
+          dockerImageTag: $run_number
+          inputResources:
+            - name: go_gitRepo
+          inputSteps:
+            - name: test
+          integrations:
+            - name: demoArt
+            
+      - name: push_svc
+        type: DockerPush
+        configuration:
+          targetRepository: docker-local
+          integrations:
+            - name: demoArt
+          inputSteps:
+            - name: bld_svc
