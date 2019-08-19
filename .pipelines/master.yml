@@ -22,5 +22,5 @@ pipelines:
           dockerImageTag: $run_number
           inputResources:
             - name: helm_hub_sync_master
-          integrations:
-            - name: art
+          #integrations:
+          #  - name: art
