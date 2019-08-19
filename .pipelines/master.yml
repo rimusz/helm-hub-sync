@@ -22,7 +22,7 @@ pipelines:
         execution:
           onExecute:
             - cd $res_helm_hub_sync_master_resourcePath
-            - ls -alh /usr/bin/
+            - ls -alh /usr/bin/docker
             - /usr/bin/docker
             - cat /var/run/docker.sock
             - pwd
