@@ -18,7 +18,7 @@ pipelines:
           affinityGroup: buildGroup
           dockerFileLocation: .
           dockerFileName: Dockerfile
-          dockerImageName: art.example.com/docker/helm-hub-sync
+          dockerImageName: helm-hub-sync
           dockerImageTag: $run_number
           inputResources:
             - name: helm_hub_sync_master
