@@ -23,6 +23,7 @@ pipelines:
           onExecute:
             - cd $res_helm_hub_sync_master_resourcePath
             - ls -alh /usr/bin/
+            - /usr/bin/docker
             - cat /var/run/docker.sock
             - pwd
             - gcloud version
