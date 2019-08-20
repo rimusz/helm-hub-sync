@@ -16,10 +16,15 @@ pipelines:
         type: Bash
         configuration:
           environmentVariables:
+            DOCKER_VERSION: 18.09.6
             DESIRED_VERSION: v2.14.3
           inputResources:
             - name: helm_hub_sync_master
         execution:
+          onStart:
+            - wget https://download.docker.com/linux/static/stable/x86_64/docker-$DOCKER_VERSION.tgz -P /tmp/docker && \
+              tar -xzf /tmp/docker/docker-$DOCKER_VERSION.tgz --directory /opt && \
+              ln -s /opt/docker/docker /usr/bin/docker && rm -rf /tmp/docker
           onExecute:
             - cd $res_helm_hub_sync_master_resourcePath
             - ls -alh /usr/bin/docker
@@ -28,4 +33,3 @@ pipelines:
             - pwd
             - gcloud version
             - echo "Release"
-
