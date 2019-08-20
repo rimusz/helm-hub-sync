@@ -1,8 +1,8 @@
 # helm-hub-sync
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/jfrog/helm-hub-sync?style=flat-square)](https://goreportcard.com/report/github.com/rimusz/helm-hub-sync)
-[![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/jfrog/helm-hub-sync)
-[![Release](https://img.shields.io/github/release/jfrog/helm-hub-sync.svg?style=flat-square)](https://github.com/jfrog/helm-hub-sync/releases/latest)
+[![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/rimusz/helm-hub-sync)
+[![Release](https://img.shields.io/github/release/jfrog/helm-hub-sync.svg?style=flat-square)](https://github.com/rimusz/helm-hub-sync/releases/latest)
 
 ![logo](./logo.png)
 
