@@ -45,7 +45,7 @@ pipelines:
               auto:
                 language: go
                 versions:
-                  - "1.12.9"
+                  - "1.12.5"
           inputResources:
             - name: helm_hub_sync_master
         execution:
